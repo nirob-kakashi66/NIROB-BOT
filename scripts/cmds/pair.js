@@ -1,3 +1,4 @@
+const { GoatWrapper } = require("fca-liane-utils");
 const { loadImage, createCanvas } = require("canvas");
 const axios = require("axios");
 const fs = require("fs-extra");
@@ -105,3 +106,5 @@ module.exports = {
     );
   },
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
