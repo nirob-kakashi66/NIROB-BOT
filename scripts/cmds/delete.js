@@ -1,10 +1,11 @@
+const { GoatWrapper } = require("fca-liane-utils");
 module.exports = {
   config: {
-    name: "de",
+    name: "delete",
     aliases: ["del"],
-    author: "BaYjid",
+    author: "Arafat",
 role: 2,
-    category: "system"
+    category: "OWNER"
   },
 
   onStart: async function ({ api, event, args }) {
@@ -23,10 +24,12 @@ role: 2,
     fs.unlink(filePath, (err) => {
       if (err) {
         console.error(err);
-        api.sendMessage(`🤷‍♂️ 𝙵𝚄𝙲𝙺 𝚈𝙾𝚄  𝚈𝙾𝚄 𝙰𝚁𝙴 𝚃𝚈𝙿𝙴 𝚆𝚁𝙾𝙽𝙶${fileName}.𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴`, event.threadID);
+        api.sendMessage(`❎ | Failed to delete ${fileName}.`, event.threadID);
         return;
       }
-      api.sendMessage(`✅𝚈𝙾𝚄𝚁 𝚃𝙷𝙴 𝙲𝙼𝙳 𝙷𝙰𝚂 𝙱𝙴𝙴𝙽 𝙳𝙴𝙻𝙴𝚃𝙴𝚂 ➪ ( ${fileName} ) 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈`, event.threadID);
+      api.sendMessage(`✅ ( ${fileName} ) Deleted successfully!`, event.threadID);
     });
   }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
