@@ -1,15 +1,17 @@
+const { GoatWrapper } = require("fca-liane-utils");
 module.exports = {
   config: {
     name: "slot",
     version: "1.0",
     author: "OtinXSandip",
+    countDown: 0,
     shortDescription: {
       en: "Slot game",
     },
     longDescription: {
       en: "Slot game.",
     },
-    category: "Game",
+    category: "fun",
   },
   langs: {
     en: {
@@ -54,13 +56,13 @@ module.exports = {
 
 function calculateWinnings(slot1, slot2, slot3, betAmount) {
   if (slot1 === "💚" && slot2 === "💚" && slot3 === "💚") {
-    return betAmount * 10;
+    return betAmount * 20;
   } else if (slot1 === "💛" && slot2 === "💛" && slot3 === "💛") {
-    return betAmount * 5;
+    return betAmount * 15;
   } else if (slot1 === slot2 && slot2 === slot3) {
-    return betAmount * 3;
+    return betAmount * 10;
   } else if (slot1 === slot2 || slot1 === slot3 || slot2 === slot3) {
-    return betAmount * 2;
+    return betAmount * 5;
   } else {
     return -betAmount;
   }
@@ -76,4 +78,6 @@ function getSpinResultMessage(slot1, slot2, slot3, winnings, getLang) {
   } else {
     return getLang("lose_message", -winnings) + `\[ ${slot1} | ${slot2} | ${slot3} ]`;
   }
-}
+        }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
