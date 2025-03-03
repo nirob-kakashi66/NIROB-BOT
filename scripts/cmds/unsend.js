@@ -1,3 +1,4 @@
+const { GoatWrapper } = require("fca-liane-utils");
 module.exports = {
 	config: {
 		name: "unsend",
@@ -36,3 +37,5 @@ module.exports = {
 		message.unsend(event.messageReply.messageID);
 	}
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
