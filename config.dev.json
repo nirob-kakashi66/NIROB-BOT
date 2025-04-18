@@ -16,40 +16,40 @@
     "enable": false,
     "ignoreCommand": []
   },
-  "authorName": "sʜᴇɪᴋʜ ʀᴜᴘᴏᴋ",
+  "authorName": "NIROB",
   "authorFB": "https://www.facebook.com/profile.php?id=100090111009775&mibextid=ZbWKwL",
   "API": {
     "DIPTO": "https://noobs-api.onrender.com/dipto",
     "SAMIR": "https://apis-samir.onrender.com",
     "RUBISH": "https://rubish-apihub.onrender.com/rubish"
   },
-  "nickNameBot": " Your VodRO 🐰💫",
+  "nickNameBot": " ᴋᴀᴋᴀsʜɪ 🖤",
   "prefix": "!",
   "vipUser": [
-    "100081491574719",
+    "61572240295227",
     ""
   ],
   "orgDEV": [
-    "100081491574719",
+    "61572240295227",
     "",
     ""
   ],
   "adminBot": [
-    "100081491574719",
+    "61572240295227",
     "",
     "",
     "",
-    "61552422054139"
+    ""
   ],
   "rubishapi": "https://rubish-apihub.onrender.com/rubish",
   "diptoapi": "https://d1pt0-call-bomber.onrender.com/dipto?",
   "GOD": [
-    "100081491574719",
+    "61572240295227",
     "",
     ""
   ],
   "DEV": [
-    "100081491574719",
+    "61572240295227",
     "",
     "",
     ""
@@ -58,7 +58,7 @@
     "enable": false,
     "whiteListIds": [
       "100081491574719",
-      "61552422054139",
+      "61572240295227",
       "",
       ""
     ],
@@ -68,7 +68,7 @@
     "enable": false,
     "whiteListThreadIds": [
       "100081491574719",
-      "61552422054139",
+      "61572240295227",
       "",
       "",
       "",
